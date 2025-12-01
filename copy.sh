@@ -289,6 +289,10 @@ if ! grep -qx 'exec-once = \$scriptsDir/KeybindsLayoutInit.sh' "$OVERLAY_SA"; th
   echo "${INFO} Added KeybindsLayoutInit.sh to user Startup_Apps overlay" 2>&1 | tee -a "$LOG"
 fi
 
+echo 'exec-once = spotify-launcher' >>"$OVERLAY_SA"
+echo 'exec-once = discord' >>"$OVERLAY_SA"
+echo 'exec-once = steam' >>"$OVERLAY_SA"
+
 # Note: The SUPER+A keybind now uses OverviewToggle.sh which automatically
 # tries quickshell first and falls back to AGS, so both can be installed
 
