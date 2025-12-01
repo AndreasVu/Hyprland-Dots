@@ -1057,14 +1057,6 @@ if [ ! -e "$HOME/.config/waybar/config" ] || [ -L "$HOME/.config/waybar/config" 
   ln -sf "$config_file" "$HOME/.config/waybar/config" 2>&1 | tee -a "$LOG"
 fi
 
-# Remove inappropriate waybar configs
-rm -rf "$HOME/.config/waybar/configs/[TOP] Default$config_remove" \
-  "$HOME/.config/waybar/configs/[BOT] Default$config_remove" \
-  "$HOME/.config/waybar/configs/[TOP] Default$config_remove (old v1)" \
-  "$HOME/.config/waybar/configs/[TOP] Default$config_remove (old v2)" \
-  "$HOME/.config/waybar/configs/[TOP] Default$config_remove (old v3)" \
-  "$HOME/.config/waybar/configs/[TOP] Default$config_remove (old v4)" 2>&1 | tee -a "$LOG" || true
-
 printf "\n%.0s" {1..1}
 
 # for SDDM (simple_sddm_2)
